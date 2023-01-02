@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:get/get.dart';
+import 'package:portfolio/app/core/widget/safari_mockup.dart';
 import 'package:portfolio/app/modules/home/controllers/home_controller.dart';
 
 class BodyView extends GetView<HomeController> {
@@ -31,7 +32,7 @@ class BodyView extends GetView<HomeController> {
           child: Container(
             clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(
-              color: Colors.grey[200],
+              color: const Color(0xFF405562),
               borderRadius: BorderRadius.circular(25),
             ),
             child: Obx(
@@ -44,8 +45,9 @@ class BodyView extends GetView<HomeController> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    const SizedBox(height: 30),
                     Padding(
-                      padding: EdgeInsets.all(30),
+                      padding: const EdgeInsets.symmetric(horizontal: 30),
                       child: Row(
                         children: [
                           Column(
@@ -77,15 +79,9 @@ class BodyView extends GetView<HomeController> {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 16),
-                    Expanded(
-                      child: SizedBox(
-                        width: double.infinity,
-                        child: Image.asset(
-                          'assets/images/bg.jpeg',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                    const SizedBox(height: 15),
+                    SafariMockup(
+                      imgSrc: 'assets/images/test3.png',
                     )
                   ],
                 ),

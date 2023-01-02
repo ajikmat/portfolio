@@ -114,6 +114,10 @@ class HeaderView extends GetView<HomeController> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
                 color: Colors.grey[100],
+                image: DecorationImage(
+                  fit: BoxFit.fitHeight,
+                  image: AssetImage('assets/images/dp.JPG'),
+                ),
               ),
             ),
           ),

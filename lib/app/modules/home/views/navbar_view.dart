@@ -23,17 +23,15 @@ class NavbarView extends GetView {
           ),
           const SizedBox(width: 8),
           const Text('AJIK'),
-          const Spacer(flex: 5),
-          Expanded(
-            flex: 2,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                buildNavButton(onTap: () {}, text: 'Home'),
-                buildNavButton(onTap: () {}, text: 'Projects'),
-                buildNavButton(onTap: () {}, text: 'Contact'),
-              ],
-            ),
+          const Spacer(),
+          Row(
+            children: [
+              buildNavButton(onTap: () {}, text: 'Home'),
+              const SizedBox(width: 50),
+              buildNavButton(onTap: () {}, text: 'Projects'),
+              const SizedBox(width: 50),
+              buildNavButton(onTap: () {}, text: 'Contact'),
+            ],
           )
         ],
       ),
